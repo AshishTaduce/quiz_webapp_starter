@@ -2,18 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c460263-5900-43b9-bd6c-50d70dd6dfcb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/QuizResult/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Timer/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Timer/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Option/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Option/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Question/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Quiz/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quiz/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,6 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -60,40 +71,71 @@
       <workItem from="1587015607558" duration="1789000" />
       <workItem from="1587017419798" duration="1791000" />
       <workItem from="1587019250023" duration="1872000" />
+      <workItem from="1587021904214" duration="1361000" />
+      <workItem from="1587096700705" duration="799000" />
+      <workItem from="1587097861576" duration="1731000" />
+      <workItem from="1587100031361" duration="1843000" />
+      <workItem from="1587101907980" duration="2086000" />
+      <workItem from="1587104067020" duration="1745000" />
+      <workItem from="1587108595989" duration="1825000" />
+      <workItem from="1587110444830" duration="1920000" />
+      <workItem from="1587112877615" duration="961000" />
+      <workItem from="1587113895476" duration="159000" />
     </task>
+    <task id="LOCAL-00001" summary="Working quiz with wait of 3 secs.">
+      <created>1587022170256</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587022170256</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Working quiz with wait of 3 secs." />
+    <option name="LAST_COMMIT_MESSAGE" value="Working quiz with wait of 3 secs." />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587010586736">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="254" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1587010586736" />
-    <state width="659" height="196" key="GridCell.Tab.0.bottom" timestamp="1587019799262">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1587022168493">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="659" height="196" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587019799262" />
-    <state width="776" height="201" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587014522467" />
-    <state width="659" height="196" key="GridCell.Tab.0.center" timestamp="1587019799262">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="659" height="196" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587019799262" />
-    <state width="776" height="201" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587014522467" />
-    <state width="659" height="196" key="GridCell.Tab.0.left" timestamp="1587019799261">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="659" height="196" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587019799261" />
-    <state width="776" height="201" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587014522466" />
-    <state width="659" height="196" key="GridCell.Tab.0.right" timestamp="1587019799262">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="659" height="196" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587019799262" />
-    <state width="776" height="201" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587014522467" />
-    <state x="498" y="204" key="git4idea.merge.GitPullDialog" timestamp="1587010467388">
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587022168493" />
+    <state width="968" height="106" key="GridCell.Tab.0.bottom" timestamp="1587113839187">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="659" height="196" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587019799262" />
+    <state width="968" height="106" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587113839187" />
+    <state width="968" height="106" key="GridCell.Tab.0.center" timestamp="1587113839187">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="659" height="196" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587019799262" />
+    <state width="968" height="106" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587113839187" />
+    <state width="968" height="106" key="GridCell.Tab.0.left" timestamp="1587113839186">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="659" height="196" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587019799261" />
+    <state width="968" height="106" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587113839186" />
+    <state width="968" height="106" key="GridCell.Tab.0.right" timestamp="1587113839187">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="659" height="196" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587019799262" />
+    <state width="968" height="106" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587113839187" />
+    <state x="0" y="93" key="Vcs.Push.Dialog.v2" timestamp="1587022308735">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1587022308735" />
+    <state x="425" y="173" key="git4idea.merge.GitPullDialog" timestamp="1587022291372">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="425" y="173" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1587022291372" />
     <state x="498" y="204" key="git4idea.merge.GitPullDialog/0.0.1600.860@0.0.1600.860" timestamp="1587010467388" />
   </component>
 </project>

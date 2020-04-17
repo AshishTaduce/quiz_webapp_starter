@@ -1,14 +1,23 @@
 import React from 'react';
 import './App.css';
 import Quiz from "./Quiz";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import QuizResult from "./QuizResult";
 
 function App() {
   return (
-      <div className="App">
-        <header className="App-header">
-          <Quiz/>
-        </header>
-      </div>
+
+          <Router>
+              <div className="App">
+                  <header className="App-header">
+              <Switch>
+                  <Route exact={true} path={'/'} component={Quiz}/>
+                  <Route exact={true} path={'/result'} component={QuizResult}/>
+              </Switch>
+                  </header>
+              </div>
+          </Router>
+
   );
 }
 

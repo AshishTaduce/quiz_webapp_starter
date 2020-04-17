@@ -1,12 +1,9 @@
-import React, {useState} from "react";
 import './styles.css';
 import Confetti from 'react-dom-confetti';
+import React from "react";
 
 export default function Option(props) {
-    // let [show, showAnswers] = useState(false);
-    // console.log(show, 'show status');
     function handleClick() {
-        // showAnswers(true);
         props.triggerClick(props.option, props.correct);
     }
     return (

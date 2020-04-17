@@ -2,6 +2,9 @@ import React from "react";
 import Question from "../Question";
 import Option from "../Option";
 import './styles.css';
+// import Timer from "../Timer";
+import { Redirect, Router } from "react-router-dom";
+import QuizResult from "../QuizResult";
 
 class Quiz extends React.Component {
     state = {
@@ -10,6 +13,8 @@ class Quiz extends React.Component {
         selection: null,
         displayedQuestionIndex: 0,
         disableClick: false,
+        status: null,
+        userChoices: [],
     };
 
     questions = [
@@ -45,22 +50,49 @@ class Quiz extends React.Component {
         },
     ];
 
-
     async triggerClick(option, isCorrect) {
+        if(this.state.displayedQuestionIndex === this.questions.length - 1){
+            this.props.history.push({
+                pathname: '/result',
+                state: {
+                    score: this.state.score,
+                    questions: this.questions,
+                    userChoices: this.state.userChoices,
+                }
+            });
+            return;
+        }
+
+        console.log('Entered triggerClick with:', option, isCorrect);
         if (isCorrect) {
             this.setState({
+                status: 'Yayy!! Correct Answer!',
                 score: this.state.score + 10,
+            })
+        }
+        else if(option === null){
+            this.setState({
+                status: 'Sorry. Timed Out',
+            })
+        }
+        else if(!isCorrect){
+            this.setState({
+                status: 'Sorry. Wrong Answer!',
             })
         }
         this.setState({
             selection: option,
             disableClick: true,
         });
+
+        this.state.userChoices.push(option);
+
         await setTimeout(() => {
             this.setState({
                 displayedQuestionIndex: this.state.displayedQuestionIndex + 1,
                 disableClick: false,
                 selection: null,
+                status: null,
             });
              }, 3000);
 
@@ -68,30 +100,43 @@ class Quiz extends React.Component {
     }
 
     render() {
-        return (
-            <div className="header">
-                <div className="score">Score: {this.state.score}</div>
-                <Question question={this.questions[this.state.displayedQuestionIndex].text}/>
-                <div className="options-container">
-                    {this.questions[this.state.displayedQuestionIndex].options.map((element, index) => {
-                        return (<
-                            Option text={element}
-                                   correct={this.questions[this.state.displayedQuestionIndex].correct_choice === index}
-                                   option={index} selected={this.state.selection === index}
-                                   triggerClick={this.triggerClick.bind(this)}
-                                   disableClick={this.state.disableClick}
-                        />);
-                    })}
+        if(this.state.displayedQuestionIndex < this.questions.length)
+            return (
+                <div className="header">
+                    <div className="score">Score: {this.state.score}</div>
+                    <Question question={this.questions[this.state.displayedQuestionIndex].text}/>
+                    <div className="options-container">
+                        {this.questions[this.state.displayedQuestionIndex].options.map((element, index) => {
+                            return (<
+                                Option text={element}
+                                       correct={this.questions[this.state.displayedQuestionIndex].correct_choice === index}
+                                       option={index} selected={this.state.selection === index}
+                                       triggerClick={this.triggerClick.bind(this)}
+                                       disableClick={this.state.disableClick}
+                            />);
+                        })}
+                    </div>
+                    <div className={'status'}>{this.state.status}</div>
+                    <div>
+
+                    </div>
                 </div>
-            </div>
-        );
+            );
+        else
+        {
+
+
+        }
+
     }
 }
 
-// <Option text={'Narendra Modi'} correct = {true} option = {1} selected = {this.state.selection === 1} triggerClick = {this.triggerClick.bind(this)}/>
-// <Option text={'Rahul Gandhi'} correct = {false} option = {2} selected = {this.state.selection === 2} triggerClick = {this.triggerClick.bind(this)}/>
-// <Option text={'Manmohan Singh'} correct = {false} option = {3} selected = {this.state.selection === 3} triggerClick = {this.triggerClick.bind(this)}/>
-// <Option text={'Sonia Gandhi'} correct = {false} option = {4} selected = {this.state.selection === 4} triggerClick = {this.triggerClick.bind(this)}/>
+// <Timer optionSubmitted ={this.state.disableClick}
+//        callBackFn = {this.triggerClick.bind(this)}
+//        option ={this.state.displayedQuestionIndex}
+//        disableTimer = {this.state.disableClick}
+//        key = {this.state.displayedQuestionIndex}
+// />
 
 export default Quiz;
 
