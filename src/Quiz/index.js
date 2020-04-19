@@ -5,6 +5,7 @@ import './styles.css';
 // import Timer from "../Timer";
 import { Redirect, Router } from "react-router-dom";
 import QuizResult from "../QuizResult";
+import TimerClass from "../TimerClass";
 
 class Quiz extends React.Component {
     state = {
@@ -99,6 +100,21 @@ class Quiz extends React.Component {
         console.log(this.state.selection, ' is the selected option');
     }
 
+    async triggerTimeOut() {
+        this.setState({
+            status: 'Sorry. Timed Out',
+            disableClick: false,
+        });
+        await setTimeout(() => {
+            this.setState({
+                displayedQuestionIndex: this.state.displayedQuestionIndex + 1,
+                disableClick: false,
+                selection: null,
+                status: null,
+            });
+        }, 3000);
+    }
+
     render() {
         if(this.state.displayedQuestionIndex < this.questions.length)
             return (
@@ -117,15 +133,15 @@ class Quiz extends React.Component {
                         })}
                     </div>
                     <div className={'status'}>{this.state.status}</div>
-                    <div>
-
-                    </div>
+                    <TimerClass
+                        key = {this.state.displayedQuestionIndex}
+                        optionSubmitted ={this.state.disableClick}
+                        callBackFn = {this.triggerClick.bind(this)}
+                    />
                 </div>
             );
         else
         {
-
-
         }
 
     }

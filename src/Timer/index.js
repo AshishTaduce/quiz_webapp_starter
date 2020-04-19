@@ -10,7 +10,6 @@ function Timer(props) {
             clearTimeout(a);
         }
         a = setTimeout(() => {
-
             props.callBackFn(null, false);
             clearTimeout(a);
         }, 10000);

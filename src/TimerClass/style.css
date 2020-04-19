@@ -1,0 +1,22 @@
+.timer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 54px;
+    width: 0;
+
+    height: 6px;
+    background-color: red;
+    animation: createBox 10s linear;
+}
+@keyframes createBox {
+    from {
+        width: 100%;
+        background-color: lightgreen;
+    }
+    to {
+        background-color: red;
+        width: 0;
+    }
+}
