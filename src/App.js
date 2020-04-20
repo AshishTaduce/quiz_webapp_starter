@@ -11,7 +11,7 @@ function App() {
               <div className="App">
                   <header className="App-header">
               <Switch>
-                  <Route exact={true} path={'/'} component={Quiz}/>
+                  <Route exact={true} path={'/React_Quiz/'} component={Quiz}/>
                   <Route exact={true} path={'/result'} component={QuizResult}/>
               </Switch>
                   </header>

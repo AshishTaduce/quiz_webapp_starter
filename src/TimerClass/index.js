@@ -28,7 +28,7 @@ class TimerClass extends React.Component {
 
     render() {
         if(!this.props.optionSubmitted){
-            return (<div className={"timer"}></div>);
+            return (<div className={"timer"}/>);
         }
         else{
             clearTimeout(this.state.timer);

@@ -2,9 +2,6 @@ import React from "react";
 import Question from "../Question";
 import Option from "../Option";
 import './styles.css';
-// import Timer from "../Timer";
-import { Redirect, Router } from "react-router-dom";
-import QuizResult from "../QuizResult";
 import TimerClass from "../TimerClass";
 
 class Quiz extends React.Component {
@@ -52,6 +49,7 @@ class Quiz extends React.Component {
     ];
 
     async triggerClick(option, isCorrect) {
+        this.state.userChoices.push(option !== null ? this.questions[this.state.displayedQuestionIndex].options[option]: 'Timed out');
         if(this.state.displayedQuestionIndex === this.questions.length - 1){
             this.props.history.push({
                 pathname: '/result',
@@ -85,9 +83,6 @@ class Quiz extends React.Component {
             selection: option,
             disableClick: true,
         });
-
-        this.state.userChoices.push(option);
-
         await setTimeout(() => {
             this.setState({
                 displayedQuestionIndex: this.state.displayedQuestionIndex + 1,
@@ -98,21 +93,6 @@ class Quiz extends React.Component {
              }, 3000);
 
         console.log(this.state.selection, ' is the selected option');
-    }
-
-    async triggerTimeOut() {
-        this.setState({
-            status: 'Sorry. Timed Out',
-            disableClick: false,
-        });
-        await setTimeout(() => {
-            this.setState({
-                displayedQuestionIndex: this.state.displayedQuestionIndex + 1,
-                disableClick: false,
-                selection: null,
-                status: null,
-            });
-        }, 3000);
     }
 
     render() {
@@ -143,16 +123,7 @@ class Quiz extends React.Component {
         else
         {
         }
-
     }
 }
 
-// <Timer optionSubmitted ={this.state.disableClick}
-//        callBackFn = {this.triggerClick.bind(this)}
-//        option ={this.state.displayedQuestionIndex}
-//        disableTimer = {this.state.disableClick}
-//        key = {this.state.displayedQuestionIndex}
-// />
-
 export default Quiz;
-
