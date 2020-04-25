@@ -5,19 +5,16 @@ class TimerClass extends React.Component {
     constructor(props) {
         super(props);
         this.state = ({
-            timeRemaining:10,
             timer: null
         });
     }
 
     componentDidMount() {
-        this.state.timer = setTimeout(() => {
-            // if(this.props.optionSubmitted || this.state.timeRemaining === 1)
+        this.setState({
+            timer: setTimeout(() => {
                 this.props.callBackFn(null, false);
-            this.state.timeRemaining--;
-            console.log(this.state.timeRemaining, 'time rem');
-            // clearTimeout(a);
-        }, 10000);
+            }, 10000),
+        })
     }
 
     componentWillUnmount() {
@@ -27,7 +24,7 @@ class TimerClass extends React.Component {
     }
 
     render() {
-        if(!this.props.optionSubmitted){
+        if(!this.props.disableClick){
             return (<div className={"timer"}/>);
         }
         else{

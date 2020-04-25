@@ -96,8 +96,7 @@ class Quiz extends React.Component {
     }
 
     render() {
-        if(this.state.displayedQuestionIndex < this.questions.length)
-            return (
+            return this.state.displayedQuestionIndex < this.questions.length ?
                 <div className="header">
                     <div className="score">Score: {this.state.score}</div>
                     <Question question={this.questions[this.state.displayedQuestionIndex].text}/>
@@ -108,21 +107,16 @@ class Quiz extends React.Component {
                                        correct={this.questions[this.state.displayedQuestionIndex].correct_choice === index}
                                        option={index} selected={this.state.selection === index}
                                        triggerClick={this.triggerClick.bind(this)}
-                                       disableClick={this.state.disableClick}
                             />);
                         })}
                     </div>
                     <div className={'status'}>{this.state.status}</div>
                     <TimerClass
                         key = {this.state.displayedQuestionIndex}
-                        optionSubmitted ={this.state.disableClick}
+                        disableClick ={this.state.disableClick}
                         callBackFn = {this.triggerClick.bind(this)}
                     />
-                </div>
-            );
-        else
-        {
-        }
+                </div> : null;
     }
 }
 

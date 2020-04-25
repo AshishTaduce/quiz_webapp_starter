@@ -10,7 +10,7 @@ export default function Option(props) {
 
         <div onClick= {!props.disableClick ? handleClick : null}
             className={`option ${props.selected? props.correct ? 'correct-option' : 'wrong-option' : ''}`}>
-            <Confetti active={props.disableClick && props.correct && props.selected} />
+            <Confetti active={props.correct && props.selected} />
             {props.text}
         </div>
     );
