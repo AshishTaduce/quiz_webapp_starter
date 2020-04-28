@@ -106,6 +106,7 @@ class Quiz extends React.Component {
                                 Option text={element}
                                        correct={this.questions[this.state.displayedQuestionIndex].correct_choice === index}
                                        option={index} selected={this.state.selection === index}
+                                       disableClick ={this.state.disableClick}
                                        triggerClick={this.triggerClick.bind(this)}
                             />);
                         })}

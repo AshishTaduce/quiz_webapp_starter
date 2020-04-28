@@ -6,7 +6,6 @@ import QuizResult from "./QuizResult";
 
 function App() {
   return (
-
           <Router>
               <div className="App">
                   <header className="App-header">
