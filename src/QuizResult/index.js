@@ -14,7 +14,7 @@ function ResultRow(props) {
             : props.userChoice !== 'Timed out' 
                 ? props.userChoice !== 'YOUR CHOICE' 
                     ? 'wrong-option'
-                    : '' 
+                    : ''
                 : 'timed-out'}`
         }>
             {props.userChoice}
@@ -23,24 +23,31 @@ function ResultRow(props) {
 }
 
 function QuizResult(props){
-
-
-        console.log(props);
-        return (<div>
+    return (<div>
             <head>
                 <title>Result Page</title>
             </head>
             <body>
             <div>Your total score is : {props.location.state.score}</div>
 
-            <div className={'result-table'}>
-                <ResultRow question = {'QUESTION'} correctChoice = {'CORRECT CHOICE'} userChoice = {'YOUR CHOICE'}/>
+            <table className={'result-table'}>
+                {/*<ResultRow question = {'QUESTION'} correctChoice = {'CORRECT CHOICE'} userChoice = {'YOUR CHOICE'}/>*/}
+                <tr>
+                    <th>QUESTION</th>
+                    <th>CORRECT CHOICE</th>
+                    <th>YOUR CHOICE</th>
+                </tr>
                 {props.location.state.questions.map(
                     (question, index) =>
-                        <ResultRow question = {question.text} correctChoice = {question.options[question.correct_choice]} userChoice = {props.location.state.userChoices[index]}/>
+                        // <ResultRow question = {question.text} correctChoice = {question.options[question.correct_choice]} userChoice = {props.location.state.userChoices[index]}/>
+                        <tr>
+                            <td>{question.text}</td>
+                            <td>{question.options[question.correct_choice]}</td>
+                            <td>{props.location.state.userChoices[index]}</td>
+                        </tr>
                     // question.options[question.text]
                 )}
-            </div>
+            </table>
             </body>
         </div>);
 

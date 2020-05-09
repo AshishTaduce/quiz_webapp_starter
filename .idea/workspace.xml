@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c460263-5900-43b9-bd6c-50d70dd6dfcb" name="Default Changelist" comment="Implemented quality changes">
+    <list default="true" id="0c460263-5900-43b9-bd6c-50d70dd6dfcb" name="Default Changelist" comment="Fixed multiple selection bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quiz/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Quiz/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QuizResult/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuizResult/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QuizResult/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/QuizResult/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,20 +28,20 @@
   <component name="ProjectId" id="1abfNo4gKbSLpbFL2JBMz1DPLDC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/build" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -119,7 +121,17 @@
       <workItem from="1587851266766" duration="72000" />
       <workItem from="1588038026412" duration="858000" />
       <workItem from="1588083544413" duration="910000" />
-      <workItem from="1588105367201" duration="280000" />
+      <workItem from="1588105367201" duration="1559000" />
+      <workItem from="1588106943540" duration="212000" />
+      <workItem from="1588107173902" duration="1162000" />
+      <workItem from="1588109900118" duration="138000" />
+      <workItem from="1588134520103" duration="1570000" />
+      <workItem from="1588136535939" duration="9000" />
+      <workItem from="1588176505841" duration="196000" />
+      <workItem from="1588309718558" duration="529000" />
+      <workItem from="1588389320178" duration="636000" />
+      <workItem from="1588485202537" duration="1098000" />
+      <workItem from="1589028828648" duration="691000" />
     </task>
     <task id="LOCAL-00001" summary="Working quiz with wait of 3 secs.">
       <created>1587022170256</created>
@@ -156,24 +168,30 @@
       <option name="project" value="LOCAL" />
       <updated>1587851170742</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed multiple selection bug">
+      <created>1588105814351</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588105814351</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Working quiz with wait of 3 secs." />
@@ -181,7 +199,8 @@
     <MESSAGE value="Implemented timer bar with status." />
     <MESSAGE value="Implemented result page" />
     <MESSAGE value="Implemented quality changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented quality changes" />
+    <MESSAGE value="Fixed multiple selection bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed multiple selection bug" />
   </component>
   <component name="WindowStateProjectService">
     <state x="217" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587310522909">
@@ -189,39 +208,39 @@
     </state>
     <state x="217" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1587310522909" />
     <state x="254" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1587010586736" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1588083591957">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1588176518609">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588083591957" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588176518609" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587363773224" />
     <state x="212" y="119" key="FileChooserDialogImpl" timestamp="1587314026865">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="212" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587314026865" />
-    <state width="659" height="129" key="GridCell.Tab.0.bottom" timestamp="1588039222102">
+    <state width="1339" height="156" key="GridCell.Tab.0.bottom" timestamp="1589029502450">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="659" height="129" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588039222102" />
+    <state width="1339" height="156" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589029502450" />
     <state width="1579" height="134" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587364247475" />
-    <state width="659" height="129" key="GridCell.Tab.0.center" timestamp="1588039222102">
+    <state width="1339" height="156" key="GridCell.Tab.0.center" timestamp="1589029502450">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="659" height="129" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588039222102" />
+    <state width="1339" height="156" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589029502450" />
     <state width="1579" height="134" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587364247475" />
-    <state width="659" height="129" key="GridCell.Tab.0.left" timestamp="1588039222102">
+    <state width="1339" height="156" key="GridCell.Tab.0.left" timestamp="1589029502450">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="659" height="129" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588039222102" />
+    <state width="1339" height="156" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589029502450" />
     <state width="1579" height="134" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587364247475" />
-    <state width="659" height="129" key="GridCell.Tab.0.right" timestamp="1588039222102">
+    <state width="1339" height="156" key="GridCell.Tab.0.right" timestamp="1589029502450">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="659" height="129" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588039222102" />
+    <state width="1339" height="156" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589029502450" />
     <state width="1579" height="134" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587364247475" />
-    <state x="0" y="93" key="Vcs.Push.Dialog.v2" timestamp="1587851239334">
+    <state x="0" y="53" key="Vcs.Push.Dialog.v2" timestamp="1589028840420">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1587851239334" />
+    <state x="0" y="53" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1589028840420" />
     <state x="425" y="173" key="git4idea.merge.GitPullDialog" timestamp="1587022291372">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
